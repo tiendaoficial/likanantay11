@@ -10,7 +10,7 @@ interface HeaderProps {
 const carouselImages = [
   {
     url: 'https://i.ibb.co/0yScHxqx/1-4.jpg',
-    title: 'Nueva Colección Verano'
+    title: 'Colección Verano'
   },
   {
     url: 'https://i.ibb.co/rGKS73TS/POLO-PARTE-DEL.jpg',
