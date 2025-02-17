@@ -16,7 +16,7 @@ interface ProductModalProps {
   onAddToCart: (size: string) => void;
 }
 
-const sizes = ['S', 'M', 'L', 'XL'];
+const sizes = ['S', 'M', 'L', 'XL', 'otro'];
 
 export default function ProductModal({
   isOpen,

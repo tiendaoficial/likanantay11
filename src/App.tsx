@@ -7,26 +7,11 @@ import Footer from './components/Footer';
 import CartModal from './components/CartModal';
 import { CartProvider } from './context/CartContext';
 
-const categories = ['Todos', 'Caballeros', 'Damas', 'Niños', 'Deportivos', 'Sublimado'];
+const categories = ['Todos','Damas','Deportivos','Servicios'];
 
 const products = [
   {
     id: '1',
-    name: 'Camisa Elegante',
-    price: 89.90,
-    category: 'Caballeros',
-    image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800',
-    description: 'Camisa elegante de algodón 100% peruano, perfecta para ocasiones especiales. Diseño moderno y elegante, ideal para eventos formales o casuales.',
-    images: [
-      'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=800',
-      'https://images.unsplash.com/photo-1603252109303-2751441dd157?w=800',
-      'https://images.unsplash.com/photo-1598033129183-c4f50c736f10?w=800',
-      'https://images.unsplash.com/photo-1607345366928-199ea26cfe3e?w=800',
-      'https://images.unsplash.com/photo-1626497764746-6dc36546b388?w=800'
-    ]
-  },
-  {
-    id: '2',
     name: 'Bikini Tropical',
     price: 39.90,
     category: 'Damas',
@@ -41,123 +26,59 @@ const products = [
     ]
   },
   {
-    id: '3',
-    name: 'Conjunto Deportivo',
-    price: 149.90,
+    id: '2',
+    name: 'Polos Deportivos Personalizables',
+    price: 0,
     category: 'Deportivos',
-    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800',
-    description: 'Conjunto deportivo de alta calidad, ideal para entrenamiento y actividades físicas. Material transpirable y duradero.',
+    image: 'https://i.ibb.co/rGKS73TS/POLO-PARTE-DEL.jpg',
+    description: '¿Buscas comodidad, estilo y un toque personal en tu indumentaria deportiva? Nuestros polos deportivos personalizables son la elección perfecta para ti, tu equipo o tu marca. usted elige el diseño, la tela nosotros lo hacemos.',
     images: [
-      'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800',
-      'https://images.unsplash.com/photo-1483721310020-03333e577078?w=800',
-      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800',
-      'https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=800',
-      'https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800'
+      'https://i.ibb.co/rGKS73TS/POLO-PARTE-DEL.jpg',
+      'https://i.ibb.co/TDXybjmV/POLO-PARTE-ATRAS.jpg'
+    ]
+  },
+  {
+    id: '3',
+    name: 'Colección "Dreamy Nights"',
+    price: 19.99,
+    category: 'Damas',
+    image: 'https://i.ibb.co/5WHWFNhN/1.jpg',
+    description: 'Disfruta de noches llenas de comodidad y estilo con nuestra colección, Con diseños únicos, estampados románticos y una tela suave, son perfectos para sentirte hermosa y relajada.✨ Variedad de colores y estampados,✨ Tela fresca y ligera,✨ Ajuste cómodo y favorecedor.',
+    images: [
+      'https://i.ibb.co/5WHWFNhN/1.jpg',
+      'https://i.ibb.co/b5t10TcX/7.jpg',
+      'https://i.ibb.co/Lz5C9G8r/10.jpg',
+      'https://i.ibb.co/60RF4vY2/13.jpg',
+      'https://i.ibb.co/GQx4SDGs/14.jpg'
     ]
   },
   {
     id: '4',
-    name: 'Conjunto Infantil',
-    price: 79.90,
-    category: 'Niños',
-    image: 'https://images.unsplash.com/photo-1522771930-78848d9293e8?w=800',
-    description: 'Conjunto infantil cómodo y resistente, perfecto para el día a día. Material suave y duradero, ideal para niños activos.',
+    name: 'Nuestros servicios',
+    price: 0,
+    category: 'Servicios',
+    image: 'https://i.ibb.co/NdXB5TXk/computadora.jpg',
+    description: '🎨 Servicios de Diseño, Impresión y Planchado de Calandra 👕✨✔ Diseño personalizado para prendas únicas.✔ Impresión de alta calidad con colores vibrantes y duraderos.✔ Planchado con calandra para un acabado profesional y resistente.📩 ¡Lleva tus ideas a la realidad con nosotros! 🔥',
     images: [
-      'https://images.unsplash.com/photo-1522771930-78848d9293e8?w=800',
-      'https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=800',
-      'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=800',
-      'https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=800',
-      'https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=800'
-    ]
+      'https://i.ibb.co/NdXB5TXk/computadora.jpg'
+    ] 
   },
   {
     id: '5',
-    name: 'polo',
-    price: 59.90,
-    category: 'Deportivos',
-    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800',
-    description: 'Polo personalizado con tu diseño preferido. Impresión de alta calidad que no se decolora. Material 100% algodón pima.',
-    images: [
-      'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800',
-      'https://images.unsplash.com/photo-1503342394128-c104d54dba01?w=800',
-      'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800',
-      'https://images.unsplash.com/photo-1503342452485-86b7f54527ef?w=800',
-      'https://images.unsplash.com/photo-1503342394128-c104d54dba01?w=800'
-    ]
-  },
-  {
-    id: '6',
-    name: 'Traje Formal',
-    price: 399.90,
-    category: 'Caballeros',
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800',
-    description: 'Traje formal de corte moderno, confeccionado con los mejores materiales. Incluye saco y pantalón. Ideal para eventos especiales.',
-    images: [
-      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=800',
-      'https://images.unsplash.com/photo-1598522325074-042db73aa4e6?w=800',
-      'https://images.unsplash.com/photo-1593032465175-481ac7f401a0?w=800',
-      'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800',
-      'https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?w=800'
-    ]
-  },
-  {
-    id: '7',
-    name: 'Blusa Elegante',
-    price: 79.90,
+    name: 'Colección "Dream & Fun"',
+    price: 19.99,
     category: 'Damas',
-    image: 'https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=800',
-    description: 'Blusa elegante con diseño moderno y sofisticado. Perfecta para ocasiones especiales o el trabajo. Material fresco y duradero.',
+    image: 'https://i.ibb.co/Q3G4hMrp/28.jpg',
+    description: 'Descubre nuestra colección de pijamas súper cómodas y con diseños divertidos. Perfectas para dormir con estilo y relajarte con total comodidad. Con telas suaves y estampados únicos, encontrarás el set ideal para ti.✨ Variedad de diseños y colores,✨ Tela ligera y fresca,✨ Ajuste cómodo y femenino, ¡Elige tu favorito y duerme con diversión! 💖🌟',
     images: [
-      'https://images.unsplash.com/photo-1551163943-3f6a855d1153?w=800',
-      'https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=800',
-      'https://images.unsplash.com/photo-1578587018452-892bacefd3f2?w=800',
-      'https://images.unsplash.com/photo-1583846783214-7229a91b20ed?w=800',
-      'https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?w=800'
-    ]
-  },
-  {
-    id: '8',
-    name: 'Diseño',
-    price: 89.90,
-    category: 'Sublimado',
-    image: 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800',
-    description: 'Uniforme deportivo completo, incluye camiseta y short. Material transpirable de alta calidad, ideal para cualquier deporte.',
-    images: [
-      'https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800',
-      'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800',
-      'https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800',
-      'https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=800',
-      'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?w=800'
-    ]
-  },
-  {
-    id: '9',
-    name: 'Impresión',
-    price: 89.90,
-    category: 'Sublimado',
-    image: 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800',
-    description: 'Uniforme deportivo completo, incluye camiseta y short. Material transpirable de alta calidad, ideal para cualquier deporte.',
-    images: [
-      'https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800',
-      'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800',
-      'https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800',
-      'https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=800',
-      'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?w=800'
-    ]
-  },
-  {
-    id: '10',
-    name: 'Planchado',
-    price: 89.90,
-    category: 'Sublimado',
-    image: 'https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800',
-    description: 'Uniforme deportivo completo, incluye camiseta y short. Material transpirable de alta calidad, ideal para cualquier deporte.',
-    images: [
-      'https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=800',
-      'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=800',
-      'https://images.unsplash.com/photo-1518459031867-a89b944bffe4?w=800',
-      'https://images.unsplash.com/photo-1519058082700-08a0b56da9b4?w=800',
-      'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?w=800'
+      'https://i.ibb.co/LXg6MR51/25.jpg',
+      'https://i.ibb.co/N61FPdc8/26.jpg',
+      'https://i.ibb.co/Vk3FX9Z/27.jpg',
+      'https://i.ibb.co/r22984V7/23.jpg',
+      'https://i.ibb.co/Rkvfc2HG/30.jpg',
+      'https://i.ibb.co/Q3G4hMrp/28.jpg',
+      'https://i.ibb.co/LDvdPPLk/29.jpg',
+      'https://i.ibb.co/j97T4bz4/24.jpg'
     ]
   }
 ];
